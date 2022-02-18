@@ -12,7 +12,28 @@
     </head>
     <body>
         <!-- Esto es un comentario btw... -->
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Alfredo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Pagina principal</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="preguntas_html.html">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="preguntas_css.html">CSS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        
         <article>
             <h1> Alfredo </h1>
             <p> <strong style="color: blue;"> Nombre: </strong> Erick Alfredo Garcia Huerta </p>
@@ -20,36 +41,25 @@
             <p> <strong style="color: blue;"> E-mail: </strong> a01708119@tec.mx</p>
         </article>
 
-        <div class="container">
-            <div class="row">
-              <div class="col">
-                <button onclick = "location.href='preguntas_html.html'">Preguntas HTML 5</button>
-              </div>
-              <div class="col">
-                <button onclick = "location.href='preguntas_css.html'">Preguntas CSS</button>
-              </div>                  
-            </div>
-        </div>
-
         <br>
 
         <article class="figure">
             <table>
                 <tr>
                     <td> 
-                        <img src="Pantro.png" 
-                            alt="Mi gato: Pantro"
-                            width="200"
+                        <figure class="figure">
+                            <img src="Pantro.png" class="figure-img img-fluid rounded" alt="Mi gato: Pantro" width="200"
                             height="200">
-                        <p class="pantro">Este es Pantro, mi gato. Uso su foto como imagen de <br>
-                            perfil en casi todos lados.</p>
+                            <figcaption class="figure-caption">Este es Pantro, mi gato. Uso su foto como imagen de <br>
+                            perfil en casi todos lados.</figcaption>
+                        </figure>
                     </td>
                     <td>
-                        <img src="Alfredo.jpeg"
-                            alt="Yo"
-                            width="300"
+                        <figure class="figure">
+                            <img src="Alfredo.jpeg" class="figure-img img-fluid rounded" alt="Yo" width="300" 
                             height="200">
-                        <p class="pantro">Este soy yo.</p>
+                            <figcaption class="figure-caption">Este soy yo.</figcaption>
+                        </figure>
                     </td>
                 </tr>
             </table>

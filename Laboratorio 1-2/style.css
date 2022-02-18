@@ -12,6 +12,10 @@ body{
     background-color: beige;
 }
 
+a{
+    color:crimson;
+}
+
 .pantro{
     text-align: center;
 }

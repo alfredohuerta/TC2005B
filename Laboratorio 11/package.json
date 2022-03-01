@@ -1,0 +1,19 @@
+{
+  "name": "tc2005b",
+  "version": "1.0.0",
+  "description": "Repositorio para TC2005B - Construcción de software y toma de decisiones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfredohuerta/TC2005B.git"
+  },
+  "author": "Erick Alfredo García Huerta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfredohuerta/TC2005B/issues"
+  },
+  "homepage": "https://github.com/alfredohuerta/TC2005B#readme"
+}

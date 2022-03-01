@@ -18,5 +18,8 @@
   "homepage": "https://github.com/alfredohuerta/TC2005B#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
   }
 }

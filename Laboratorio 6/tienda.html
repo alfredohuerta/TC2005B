@@ -8,123 +8,138 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="container">
-            <h1>Productos</h1>
-            <hr>
-            <div class="row" id="items"></div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Laboratorio 6</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Pagina principal</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
 
-        <div class="container">
-            <div class="row align-items-start">
-                
-              <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img src="imgs/IX hoodie.jfif" class="card-img-top" alt="IX hoodie">
-                    <div class="card-body">
-                      <h5 class="card-title">Profecy Dungeon Hoodie</h5>
-                      <p class="card-text">Unlocked after completing The Profecy Dungeon.</p>
-                      <button type="button" class="btn btn-primary btn-sm" id="al-carrito" onclick="">Agregar al carrito</button>
-                    </div>
-                </div>
-              </div>
+      <br>
 
-              <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img src="imgs/Destiny 2 grimoire.jpg" class="card-img-top" alt="Grimoire">
-                    <div class="card-body">
-                      <h5 class="card-title">Grimoire physical book</h5>
-                      <p class="card-text">Unlocked after recovering the respective grimoire entry.</p>
-                      <button type="button" class="btn btn-primary btn-sm" id="al-carrito" onclick="">Agregar al carrito</button>
-                    </div>
+      <div class="container">
+        <div class="row align-items-start">
+            
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img src="imgs/IX hoodie.jfif" class="card-img-top" alt="IX hoodie">
+                <div class="card-body">
+                  <h5 class="card-title">Profecy Dungeon Hoodie</h5>
+                  <p class="card-text">Unlocked after completing The Profecy Dungeon.</p>
+                  <button type="button" class="btn btn-primary btn-sm" id="item-1" onclick="">Agregar al carrito</button>
                 </div>
             </div>
+          </div>
 
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img src="imgs/Smallen.jpg" class="card-img-top" alt="Smallen">
-                    <div class="card-body">
-                        <h5 class="card-title">Baby Fallen Plushie</h5>
-                        <p class="card-text">Unlocked after completing the Season of the Splicer questline</p>
-                        <button type="button" class="btn btn-primary btn-sm" id="al-carrito" onclick="">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <br>
-
-            <div class="row align-items-center">
-
-              <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img src="imgs/Vow of the Disciple hoodie.jpg" class="card-img-top" alt="Vow of the Disciple hoodie">
-                    <div class="card-body">
-                      <h5 class="card-title">Vow of the Disciple hoodie</h5>
-                      <p class="card-text">Unlocked after completing The Vow Of The Disciple raid in contest mode.</p>
-                      <button type="button" class="btn btn-primary btn-sm" id="al-carrito" onclick="">Agregar al carrito</button>
-                    </div>
-                </div>
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img src="imgs/Destiny 2 grimoire.jpg" class="card-img-top" alt="Grimoire">
+              <div class="card-body">
+                <h5 class="card-title">Grimoire physical book</h5>
+                <p class="card-text">Unlocked after recovering the respective grimoire entry.</p>
+                <button type="button" class="btn btn-primary btn-sm" id="item-2" onclick="">Agregar al carrito</button>
               </div>
-
-              <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img src="imgs/Alexa ghost.png" class="card-img-top" alt="Ghost extension">
-                    <div class="card-body">
-                      <h5 class="card-title">Ghost Alexa</h5>
-                      <p class="card-text">Alexa extension in the form of a Ghost black shell</p>
-                      <button type="button" class="btn btn-primary btn-sm" id="al-carrito" onclick="">Agregar al carrito</button>
-                    </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img src="imgs/Celestial nighthawk.jfif" class="card-img-top" alt="Celestial nighthawk">
-                    <div class="card-body">
-                      <h5 class="card-title">Celestial nighthawk</h5>
-                      <p class="card-text">Celestial nighthawk hunter helmet replica.</p>
-                      <button type="button" class="btn btn-primary btn-sm" id="al-carrito" onclick="">Agregar al carrito</button>
-                    </div>
-                </div>
-              </div>
-
             </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img src="imgs/Smallen.jpg" class="card-img-top" alt="Smallen">
+              <div class="card-body">
+                <h5 class="card-title">Baby Fallen Plushie</h5>
+                <p class="card-text">Unlocked after completing the Season of the Splicer questline</p>
+                <button type="button" class="btn btn-primary btn-sm" id="item-3" onclick="">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <br>
 
-        <div class="container">
-            <h1>Carrito</h1>
-            <hr>
-            <div class="row" id="items"></div>
-        </div>
+        <div class="row align-items-center">
 
-        <table class="table table-hover">
-          <thead>
-            <th scope="row"># de producto</th>
-            <td>Cantidad de productos</td>
-            <td>Nombre del producto</td>
-            <td>Precio del producto</td>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Empty</td>
-              <td>Empty</td>
-              <td>Empty</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <footer>
-            <br>
-            <div class="mx-auto" style="width: 200px;">
-                <p>Erick Alfredo García Huerta | <a href="https://github.com/alfredohuerta/TC2005B-Lab" target="_blank">Github</a> </p>
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img src="imgs/Vow of the Disciple hoodie.jpg" class="card-img-top" alt="Vow of the Disciple hoodie">
+              <div class="card-body">
+                <h5 class="card-title">Vow of the Disciple hoodie</h5>
+                <p class="card-text">Unlocked after completing The Vow Of The Disciple raid in contest mode.</p>
+                <button type="button" class="btn btn-primary btn-sm" id="item-4" onclick="">Agregar al carrito</button>
+              </div>
             </div>
-        </footer>
+          </div>
 
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img src="imgs/Alexa ghost.png" class="card-img-top" alt="Ghost extension">
+              <div class="card-body">
+                <h5 class="card-title">Ghost Alexa</h5>
+                <p class="card-text">Alexa extension in the form of a Ghost black shell</p>
+                <button type="button" class="btn btn-primary btn-sm" id="item-5" onclick="">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img src="imgs/Celestial nighthawk.jfif" class="card-img-top" alt="Celestial nighthawk">
+              <div class="card-body">
+                <h5 class="card-title">Celestial nighthawk</h5>
+                <p class="card-text">Celestial nighthawk hunter helmet replica.</p>
+                <button type="button" class="btn btn-primary btn-sm" id="item-6" onclick="">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+      <br>
+
+      <div class="container">
+        <h1>Carrito</h1>
+        <hr>
+        <div class="row" id="items"></div>
+      </div>
+
+      <table class="table table-hover">
+
+        <thead>
+          <th scope="row" id="numero-productos"># de producto</th>
+          <td id="cantidad-productos">Cantidad de productos</td>
+          <td id="nombre-productos">Nombre del producto</td>
+          <td id="precio">Precio del producto</td>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row" id="numero-productos">1</th>
+            <td id="cantidad-productos">Empty</td>
+            <td id="nombre-productos">Empty</td>
+            <td id="precio">Empty</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <footer>
         <br>
+        <div class="mx-auto" style="width: 200px;">
+          <p>Erick Alfredo García Huerta | <a href="https://github.com/alfredohuerta/TC2005B-Lab" target="_blank">Github</a> </p>
+        </div>
+      </footer>
 
-        <script src= app.js></script>
+      <br>
+
+      <script src= app.js></script>
     </body>
 </html>

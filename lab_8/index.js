@@ -1,16 +1,16 @@
+const filesystem = require('fs');
+function doc_TXT(contenido){
+    filesystem.writeFileSync('doc.txt', contenido);
+}
+
 const http = require('http');
-const fs = require('fs');
 
-const page = fs.readFileSync(`${__dirname}/public/index.html`, 'utf-8');
-
-const server = http.createServer();
-
-server.on('request', (req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-
-    res.end(page);
+const server = http.createServer( (request, response) => {
+    response.writeHead(200, {"Content-type": "text/html"});
+    const html = filesystem.readFileSync(__dirname + "/public/index.html");
+    response.end(html);
 });
 
-server.listen(3000, 'localhost', () => {
-    console.log('Server waiting for request');
-});
+console.log('Creo que esto funciona...');
+
+server.listen(3000);

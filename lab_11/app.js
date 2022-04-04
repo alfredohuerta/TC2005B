@@ -1,16 +1,22 @@
 const express = require('express');
 const app = express();
 
-//Middleware
-app.use('/ruta', (request, response, next) => {
-    console.log('respuesta de la ruta /ruta')
-    response.send('Hola, esta es la ruta /ruta!');
-    next(); //Le permite a la petición avanzar hacia el siguiente middleware
-});
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
 
-app.use((request, response, next) => {
-    console.log('Otro middleware!');
-    response.send('¡Hola mundo!'); //Manda la respuesta
+//Routes
+const routesLit = require('./routes/rutas_lit')
+const routesRand = require('./routes/rutas_rand')
+
+app.use('/', routesLit);
+app.use('/', routesRand)
+
+//Error 404
+app.all('*', (req, res, next) => {
+    res.status(404).json({
+        status: 'Error 404',
+        message: `La ruta ${req.originalUrl} no existe`,
+    });
 });
 
 app.listen(3000);

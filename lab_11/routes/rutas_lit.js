@@ -1,7 +1,6 @@
 let libros = ["Nostalgia de la muerte", "Altazor", "Poesía en movimiento", "Algo sobre la muerte del Mayor Sabines"];
 
 const express = require("express");
-const { redirect } = require("express/lib/response");
 const path = require('path');
 const router = express.Router();
 

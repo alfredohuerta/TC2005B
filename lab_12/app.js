@@ -1,14 +1,31 @@
-const { Router, request, response } = require('express');
-const express = require ('express');
-const bodyParser = express.Router();
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 
-const weapons = ["Bad juju", "Malfeasant", "Last Word", "Thorn"];
+const app = express();
 
-router.get('/unaruta', (request, response, next) =>{
-    response.sendFile(path.join(__dirname, '..', 'views', 'el-archivo.html'));
+app.use(bodyParser.urlencoded({extended: false}));
+
+// Settings
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+app.engine('html', require('ejs').renderFile);
+
+//Static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Routes
+const routesLit = require('./routes/rutas_lit')
+const routesRand = require('./routes/rutas_rand')
+app.use('/', routesLit);
+app.use('/', routesRand)
+
+//Error 404
+app.all('*', (req, res, next) => {
+    res.status(404).json({
+        status: 'Error 404',
+        message: `La ruta ${req.originalUrl} no existe`,
+    });
 });
 
-router.get('/', (request, response, next) =>{
-    console.log(request.body);
-    let respuesta = '<!DOCTYPE html><html lang="es-mx><head><title>Caballos</title><meta charset="utf-8"'
-})
+app.listen(3000);

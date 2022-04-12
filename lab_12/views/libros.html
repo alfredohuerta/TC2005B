@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <title> <%= title %>Libros </title>
+    <%- include('includes/head.html')%>
+</head>
+
+<body class="mx-auto" style="width: 90%;">
+    <%- include ('includes/navbar.html')%>
+
+    <br>
+
+    <div class="row row-cols-2 row-cols-md-4 g-0.5">
+        <% for(let i in libros){ %>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../imgs/Libro.png" class="card-img-top" alt="Libro">
+                    <div class="card-body">
+                        <p class="card-text"><%= libros[i] %></p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+    <br>
+    <form action="/libros" method="POST">
+        <label for="nombre">Nombre del nuevo libro: </label>
+        <input type="text" name="nombre" required>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <%- include('includes/footer.html') %>
+
+</body>
+
+</html>

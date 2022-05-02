@@ -15,6 +15,7 @@ exports.post_libros = (require, response) =>{
     const libro = new Libros(require.body.nombre);
     libro.save();
     response.status = 303;
+    response.setHeader('Set-Cookie', 'ultimo_libro= ' + libro.nombre);
     response.redirect('/libros');
 };
 

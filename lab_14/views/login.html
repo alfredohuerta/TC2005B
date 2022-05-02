@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+  <title>
+    <%= title %>Pregunta
+  </title>
+  <%- include('includes/head.html')%>
+</head>
+
+<body class="mx-auto" style="width: 90%;">
+
+  <h1>Bienvenido al sitio de Alfredo</h1>
+  <hr>
+
+  <p>Por favor inicie sesión: </p>
+  <br>
+
+  <form action="/users/login" method="post">
+    <label for="nombre">Nombre de usuario: </label>
+      <input type="text" name="nombre" required>
+    + <label for="passwd">Constraseña: </label>
+    + <input type="password" name="passwd" required>
+    + <input type="submit" value="Enviar">
+  </form>
+
+  <%- include('includes/footer.html') %>
+</body>
+
+</html>

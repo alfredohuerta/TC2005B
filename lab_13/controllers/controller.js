@@ -8,7 +8,6 @@ exports.get_main = (require, response) =>{
 };
 
 exports.get_libros = (require, response) =>{
-    console.log(libros);
     response.render('libros.html', {libros, title});
 };
 

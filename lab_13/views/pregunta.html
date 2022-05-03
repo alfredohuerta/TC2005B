@@ -10,12 +10,20 @@
   <%- include ('includes/navbar.html')%>
 
     <h3>¿Qué beneficios encuentras en el estilo MVC?</h3>
-
-    <p></p>
+    <p>Que al dividir los componentes en múltiples archivos es mucho más fácil triangular la posición de aquellos elementos
+      que estén causando algún fallo, además de que permite tener un mejor orden, haciendo más sencillo el proceso de
+      lectura e identificación de las funciones de cada apartado del código.
+    </p>
     <br>
 
     <h3>¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</h3>
-    <p></p>
+    <p>
+      Para un primeriso es complicado llevar a cabo una separación conciente de estos archivos, además de que los distintos
+      elementos necesarios para hacer funcionar estos archivos individualmente llevan a confusiones, haciendo importaciones
+      de componenetes o librerías inútiles. Además de que en caso de que no se tenga un control estricto de las convenciones
+      del código, se pueden crear colisiones donde las variabeles tengan nombres similares y lleven a cabo funciones 
+      diferentes.
+    </p>
 
     <%- include('includes/footer.html') %>
 </body>

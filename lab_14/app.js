@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 //Session configuration 
 app.use(session({
-    secret: 'qwe1rtyu2ioas6df3ghjkqwer1tyuia64sdfghjqwerty243u',
+    secret: 'ñlknaeañco3pom4ñi3jrcñlawjomxñi3iq3mc4rsejf0438cnf83h4cknh43ui',
     resave: false,
     saveUninitialized: false,
 }));
@@ -30,7 +30,7 @@ const routesRand = require('./routes/rutas_rand')
 const routesUser = require('./routes/auth.routes')
 app.use('/', routesLit);
 app.use('/', routesRand)
-app.use('/', routesUser)
+app.use('/users', routesUser)
 
 //Error 404
 app.all('*', (req, res, next) => {

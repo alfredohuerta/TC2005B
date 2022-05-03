@@ -80,6 +80,7 @@ const server = http.createServer((request, response) =>{
         response.write('</body>');
         response.write('</html>');
     -   response.end();
+
     }else if(request.url === '/libros' && request.method == 'GET'){
         response.setHeader('Content-Type', 'text/html');
 +       response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Laboratorio 10</title><meta charset="utf-8"></meta><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></head>');
@@ -101,11 +102,11 @@ const server = http.createServer((request, response) =>{
         }
 
         response.write('<br>');
-        response.write('<form action="/nuevo" method="POST">');
-+       response.write('<label for="nombre">Nombre del nuevo libro: </label>');
-+       response.write('<input type="text" name="nombre" required>');
-+       response.write('<input type="submit" value="Enviar">');
-+       response.write('</form>');
+        response.write('<form action="/libros" method="POST">');
+        response.write('<label for="nombre">Nombre del nuevo libro: </label>');
+        response.write('<input type="text" name="nombre" required>');
+        response.write('<input type="submit" value="Enviar">');
+        response.write('</form>');
 
         response.write('<footer>');
         response.write('<br>');
@@ -117,39 +118,51 @@ const server = http.createServer((request, response) =>{
         response.write('</body>');
         response.write('</html>');
         response.end();
-    }else if (request.url === '/nuevo' && request.method === 'POST') {
+
+    }else if (request.url === '/libros' && request.method == 'POST'){
         const datos = [];
         request.on('data', (dato) => {
-        console.log(dato);
-        datos.push(dato);
+            console.log(dato);
+            datos.push(dato);
         });
         return request.on('end', () => {
             console.log(datos);
-+           const datos_completos = Buffer.concat(datos).toString();
-+           console.log(datos_completos);
-+           const nuevo_dato = datos_completos.split('=')[1];
-+           console.log(nuevo_dato);
-+           caballos.push(nuevo_dato);
-+           console.log(caballos);
-+           response.setHeader('Content-Type', 'text/html');
-+           response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos</title><meta charset="utf-8"></meta></head>');
-+           response.write('<body>');
-+           response.write('<h1>Bienvenido a este sitio de caballos</h1>');
-+           response.write('<main>');
-+           response.write('<h2>Aquí se habla se de caballos</h2>');
-+           response.write('<h3>' + nuevo_dato + ' fue agregado a la lista.</h3>');
-+           response.write('<p>Estos son nuestros caballos:</p>');
-+           response.write('<ol>');
-+           for (let i in caballos) {
-+               response.write('<li>' + caballos[i] + '</li>');
-+           }
-+           response.write('</ol>');
-+           response.write('<a href="nuevo">Agregar un nuevo caballo</a>');
-+           response.write('</main>');
-+           response.write('</body>');
-+           return response.end();
-        })
-    }else if(request.url === '/route'){
+            const datos_completos = Buffer.concat(datos).toString();
+            console.log(datos_completos);
+            const nuevo_dato = datos_completos.split('=')[1];
+            console.log(nuevo_dato);
+            libros.push(nuevo_dato);
+            console.log(libros);
+            response.setHeader('Content-Type', 'text/html');
+    +       response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Laboratorio 10</title><meta charset="utf-8"></meta><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></head>');
+            response.write('<body class="mx-auto" style="width: 80%;">');
+            response.write('<p class="text-center"><b>Laboratorio 10 | Erick Alfredo García Huerta</b></p>');
+            response.write('<hr>');
+
+            for(let i in libros){
+                response.write('<div classs="container">');
+                    response.write('<div class="row align-items-start">');
+                        response.write('<div class="card" style="width: 18rem;">');
+                            response.write('<img src="..." class="card-img-top" alt="...">');
+                            response.write('<div class="card-body">');
+                            response.write('<p class="card-text">' + libros[i] + '</p>');
+                            response.write('</div>');
+                        response.write('</div>');
+                    response.write('</div>');
+                response.write('</div>');
+            }
+            response.write('<footer>');
+            response.write('<br>');
+            response.write('<div class="mx-auto" style="width: 20%;">');
+            response.write('<p class="text-center">Erick Alfredo García Huerta | <a href="https://github.com/alfredohuerta/TC2005B-Lab" target="_blank">Github</a> </p>');
+            response.write('</div>');
+            response.write('</footer>');
+    
+            response.write('</body>');
+            response.write('</html>');
+            return response.end();
+        });
+    } else if(request.url === '/route'){
         response.setHeader('Content-Type', 'text/html');
 +       response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Laboratorio 10</title><meta charset="utf-8"></meta><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></head>');
         response.write('<body class="mx-auto" style="width: 80%;">');

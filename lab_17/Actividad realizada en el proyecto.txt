@@ -1,0 +1,1 @@
+La implementación se llevó a cabo en pertenece.model.js del repositorio del equipo https://github.com/iangg29/natgas/blob/develop/server/models/pertenece.model.js
